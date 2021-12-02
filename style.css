@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebdddd;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.toggle span {
+  width: 40px;
+  height: 4px;
+  border-radius: 4px;
+  position: absolute;
+  background-color: blue;
+  transition: 0.5s;
+}
+.toggle span:nth-child(1) {
+  width: 25px;
+  transform: translateY(-15px);
+  left: 15px;
+}
+.toggle span:nth-child(2) {
+  width: 15px;
+  transform: translateY(15px);
+  left: 15px;
+}
+
+.toggle.active span:nth-child(3) {
+  transform: translateX(100px);
+}
+.toggle.active span:nth-child(1) {
+  width: 40px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.125s;
+}
+.toggle.active span:nth-child(2) {
+  width: 40px;
+  transform: translateY(0px) rotate(315deg);
+  transition-delay: 0.25s;
+}
